@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, EventEmitter, Output, booleanAttribute } from '@angular/core';
-import PokeGenerations from '../../types/pokeGenerations';
+import PokeGenerations from '../../types/PokeGenerations'
 
 @Component({
   selector: 'app-poke-filter',

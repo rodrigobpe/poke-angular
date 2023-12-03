@@ -5,7 +5,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PokeCardsComponent } from './components/poke-cards/poke-cards.component';
 import { PokeFilterComponent } from './components/poke-filter/poke-filter.component';
-import PokeGenerations from './types/pokeGenerations';
+import PokeGenerations from './types/PokeGenerations';
 import pokeGenerations from './mock/pokeGenerations';
 import { PokemonService } from './services/pokemon.service';
 import { Observable } from 'rxjs';

@@ -6,18 +6,18 @@ const pokeGenerations = [
     },
     {
         name:'2° Geração',
-        limit:151,
-        offset:0
+        limit:100,
+        offset:151
     },
     {
         name:'3° Geração',
-        limit:151,
-        offset:0
+        limit:135,
+        offset:251
     },
     {
         name:'4° Geração',
-        limit:151,
-        offset:0
+        limit:107,
+        offset:386
     },
     {
         name:'5° Geração',
