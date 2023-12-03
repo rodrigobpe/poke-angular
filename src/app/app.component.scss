@@ -1,10 +1,10 @@
 main{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
     margin: 0 auto;
     min-height: 84vh;
-    background-color:antiquewhite;
 
     .poke__welcome{
         display: flex;
@@ -19,5 +19,14 @@ main{
         span{
             font-size: 48px;
         }
+    }
+    .poke__card_container{
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        max-width: 1800px;
+        flex-wrap: wrap;
     }
 }

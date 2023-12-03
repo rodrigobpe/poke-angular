@@ -1,9 +1,12 @@
 <app-header/>
 <main>
-  <div class="poke__welcome">
+  <div class="poke__welcome" *ngIf="!filter">
     <p>Seja bem vindo ao <strong>Poke Angular!</strong></p>
     <span>Qual geração de pokémons você gostaria de verificar?</span>
-    <app-poke-filter [pokeGenerations]="pokeGenerations" />
+    <app-poke-filter (updateGeneration)="onClickUpdateGenration($event)" isWelcome [pokeGenerations]="pokeGenerations" />
+  </div>
+  <div class="poke__card_container" *ngIf="filter">
+    <app-poke-cards *ngFor="let pokemon of pokemon$ | async as pokemonn;else loading" [pokemon]="pokemon"></app-poke-cards>
   </div>
 </main>
 <app-footer/>

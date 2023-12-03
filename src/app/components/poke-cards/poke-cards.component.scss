@@ -1,0 +1,44 @@
+.poke__card{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap:10px;
+    background-color: white;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    height: 300px;
+    transition: all .2s ease-in-out;
+
+    &:hover{
+        transform: scale(1.05);
+    }
+
+    .poke__card_title{
+        text-align: center;
+        font-size: 30px;
+        text-transform: capitalize;
+    }
+
+    .poke__card_img{
+        width: 40%;
+    }
+
+    .poke__card_desc{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span{
+            margin: auto 10px;
+            padding: 10px 20px;
+            text-align: center;
+            min-width: 100px;
+            background-color: aqua;
+            border-radius: 20px;
+            text-transform: uppercase;
+        }
+    }
+}

@@ -12,4 +12,11 @@ import PokeGenerations from '../../types/pokeGenerations';
 export class PokeFilterComponent {
   @Input() pokeGenerations: PokeGenerations[];
   @Input({transform:booleanAttribute}) isWelcome:boolean
+  @Output() updateGeneration = new EventEmitter();
+
+  clickUpdateGeneration({limit,offset}:{limit:number,offset:number}){
+    this.updateGeneration.emit({limit,offset})
+  }
+
+
 }

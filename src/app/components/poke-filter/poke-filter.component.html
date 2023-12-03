@@ -1,5 +1,5 @@
 <div class="poke__filter" [ngClass]="isWelcome ? 'welcome' : ''">
-    <div class="poke__filter_card" *ngFor="let generation of pokeGenerations">
+    <div (click)="clickUpdateGeneration({limit:generation.limit,offset:generation.offset})" class="poke__filter_card" *ngFor="let generation of pokeGenerations">
         <p>{{generation.name}}</p>
     </div>
 </div>
