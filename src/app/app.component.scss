@@ -1,0 +1,24 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    min-height: 81.8vh;
+    width: 1800px;
+    background-color: antiquewhite;
+
+    .poke__welcome{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        p{
+            font-size: 60px;
+        }
+
+        span{
+            font-size: 48px;
+        }
+    }
+}

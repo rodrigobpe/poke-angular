@@ -1,0 +1,13 @@
+.poke__header{
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    background-color:black;
+
+    .poke__logo{
+        color: white;
+        font-family: 'Pokemon Solid', sans-serif;
+        font-size: 30px;
+    }
+}
