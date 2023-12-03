@@ -1,0 +1,26 @@
+.poke__filter {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px auto 0px auto;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    gap: 10px;
+
+    .poke__filter_card {
+        display: flex;
+        padding: 10px 20px;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transform-style: preserve-3d;
+        transition:
+            .2s ease-in-out transform,
+            .2s ease-in-out box-shadow;
+        border-radius: 20px;
+
+        &:hover {
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+    }
+}

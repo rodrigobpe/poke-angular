@@ -45,3 +45,5 @@ const pokeGenerations = [
         offset:0
     },
 ]
+
+export default pokeGenerations

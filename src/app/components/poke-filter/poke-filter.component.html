@@ -1,1 +1,5 @@
-<p>poke-filter works!</p>
+<div class="poke__filter" [ngClass]="isWelcome ? 'welcome' : ''">
+    <div class="poke__filter_card" *ngFor="let generation of pokeGenerations">
+        <p>{{generation.name}}</p>
+    </div>
+</div>
