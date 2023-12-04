@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Pokemon } from '../types/Pokemon';
 import { delay, map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
+import PokeTypes from '../types/PokeTypes';
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +18,16 @@ export class PokemonService {
       map((res:any) => {
         return res.results.map((result:any) =>{
            return result           
+        })
+      })
+    )
+  }
+
+  getPokemonTypes(id:number){
+    return this.http.get<PokeTypes[]>(`${this.baseUrl}pokemon/${id}`).pipe(
+      map((res:any)=> {
+        return res.types.map((types:any) => {
+          return types.type.name
         })
       })
     )

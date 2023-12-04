@@ -25,14 +25,13 @@ import { Pokemon } from './types/Pokemon';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent implements OnInit {
+export class AppComponent{
   constructor(private pokeService:PokemonService){}
-  pokemon$:Observable<Pokemon[]> = new Observable;
-  filter:boolean
 
-  ngOnInit(): void {
-  }
+  pokemon$:Observable<Pokemon[]> = new Observable;
+  filter:boolean  
   pokeGenerations: PokeGenerations[] = pokeGenerations
+  
   onClickUpdateGenration({limit,offset}:{limit:number,offset:number}){
     this.pokemon$ = this.pokeService.getAllPokemons({limit,offset})
     this.filter = true

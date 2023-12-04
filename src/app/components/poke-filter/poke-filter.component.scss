@@ -30,3 +30,12 @@
         }
     }
 }
+
+@media (max-width: 600px) {
+    .poke__filter{
+        max-width: 375px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+}

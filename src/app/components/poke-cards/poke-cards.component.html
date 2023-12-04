@@ -6,7 +6,6 @@
         class="poke__card_img"
     >
     <div class="poke__card_desc">
-        <span>FADA</span>
-        <span>FOGO</span>
+        <span [ngClass]="type" *ngFor="let type of types$ | async">{{type}}</span>
     </div>
 </div>
