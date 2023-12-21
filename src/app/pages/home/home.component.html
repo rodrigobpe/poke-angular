@@ -1,0 +1,21 @@
+<div class="poke__welcome" *ngIf="!filter">
+    <p>Seja bem vindo ao <strong>Poke Angular!</strong></p>
+    <span>Qual geração de pokémons você gostaria de verificar?</span>
+    <app-poke-filter (updateGeneration)="onClickUpdateGenration($event)" isWelcome
+        [pokeGenerations]="pokeGenerations" />
+</div>
+<div class="poke__main" *ngIf="pokemon$ | async as pokemons;else loading">
+    <app-poke-filter id="filter" *ngIf="filter" (updateGeneration)="onClickUpdateGenration($event)"
+        [pokeGenerations]="pokeGenerations" />
+    <div class="poke__box">
+        <app-poke-cards *ngFor="let pokemon of pokemons;else loading" [pokemon]="pokemon"></app-poke-cards>
+    </div>
+    <a href="#filter" class="poke__turn_init" >
+        <span>&uarr;</span>
+    </a>
+</div>
+<ng-template #loading>
+    <div class="loading">
+        <span class="loader" *ngIf="filter"></span>
+    </div>
+</ng-template>
